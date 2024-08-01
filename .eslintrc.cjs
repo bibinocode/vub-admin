@@ -20,6 +20,7 @@ module.exports = {
   plugin: ['import'],
   parserOptions: {
     ecmaVersion: 'latest',
+    sourceType: 'module',
     ecmaFeatures: {
       jsx: true
     }
