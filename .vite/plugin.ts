@@ -19,7 +19,9 @@ const CDN_IMPORT_MAP = [{}]
 
 export function createVitePlugin(): PluginOption[] {
   return [
-    VueRouter(),
+    VueRouter({
+      dts: 'type/typed-router.d.ts'
+    }),
     VueMacros({
       plugins: {
         vue: vue(),
@@ -45,7 +47,8 @@ export function createVitePlugin(): PluginOption[] {
     }),
     AutoImport({
       include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
-      imports: ['vue', VueRouterAutoImports, '@vueuse/core']
+      imports: ['vue', VueRouterAutoImports, '@vueuse/core', 'vue/macros', 'pinia'],
+      dts: 'type/auto-imports.d.ts'
     }),
     Components({
       directoryAsNamespace: true, // 自动导入时，目录名作为命名空间
@@ -55,7 +58,8 @@ export function createVitePlugin(): PluginOption[] {
           prefix: 'icon', // 自定义前缀使用 {prefix}-{collection}-{icon}
           customCollections: ['menu'] // 自定义图标集合
         })
-      ]
+      ],
+      dts: 'type/components.d.ts'
     }),
     VitePWA({
       registerType: 'autoUpdate'
