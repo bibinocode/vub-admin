@@ -14,7 +14,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { VitePWA } from 'vite-plugin-pwa'
 import importToCDN from 'vite-plugin-cdn-import'
-import ViteMarkdown from 'vite-plugin-vue-markdown'
+import ViteMarkdown from 'unplugin-vue-markdown/vite'
+import prism from 'markdown-it-prism'
 
 /** @TODO:自定义CDN导入 */
 const CDN_IMPORT_MAP = [{}]
@@ -23,7 +24,7 @@ export function createVitePlugin(): PluginOption[] {
   return [
     VueRouter({
       dts: 'type/typed-router.d.ts',
-      extensions: ['vue', 'ts', 'tsx', 'md']
+      extensions: ['vue', 'md']
     }),
     VueMacros({
       plugins: {
@@ -71,6 +72,9 @@ export function createVitePlugin(): PluginOption[] {
     VitePWA({
       registerType: 'autoUpdate'
     }),
-    ViteMarkdown()
+    ViteMarkdown({
+      headEnabled: true,
+      markdownItUses: [prism]
+    })
   ]
 }
