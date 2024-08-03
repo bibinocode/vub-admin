@@ -2,7 +2,8 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
-  presetWind,
+  presetTypography,
+  presetUno,
   transformerDirectives
 } from 'unocss'
 
@@ -13,10 +14,11 @@ export default defineConfig({
   rules: [],
   /** 预设 */
   presets: [
-    presetWind(),
+    presetUno(),
+    presetTypography(),
     presetAttributify(),
     presetIcons({
-      prefix: 'icon',
+      prefix: 'i-',
       extraProperties: {
         display: 'inline-block' // 默认让其变成行内快
       }

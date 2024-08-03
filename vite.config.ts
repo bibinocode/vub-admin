@@ -5,12 +5,22 @@ import { createVitePlugin } from './.vite/plugin'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: createVitePlugin(),
+  css: {
+    /** 使用 lightningcss 作为 css 处理器 */
+    transformer: 'lightningcss',
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/assets/css/variables.scss"`
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '@assets': fileURLToPath(new URL('./src/assets', import.meta.url))
     }
   },
+
   build: {
     sourcemap: false,
     rollupOptions: {

@@ -52,8 +52,9 @@ export function createVitePlugin(): PluginOption[] {
       dts: 'type/auto-imports.d.ts'
     }),
     Components({
-      directoryAsNamespace: true, // 自动导入时，目录名作为命名空间
-      collapseSamePrefixes: true, // 自动导入时，自动合并相同前缀的导入
+      directoryAsNamespace: false, // 自动导入时，目录名作为命名空间
+      collapseSamePrefixes: false, // 自动导入时，自动合并相同前缀的导入
+      dirs: ['src/components'],
       resolvers: [
         IconsResolver({
           prefix: 'icon', // 自定义前缀使用 {prefix}-{collection}-{icon}

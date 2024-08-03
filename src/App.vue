@@ -8,7 +8,7 @@ import { registerSW } from 'virtual:pwa-register'
  */
 function registerPwaWorker(enable: boolean = true) {
   if (enable) {
-    registerSW({	
+    registerSW({
       immediate: true,
       onRegisteredSW(_url, registration) {
         setInterval(() => {

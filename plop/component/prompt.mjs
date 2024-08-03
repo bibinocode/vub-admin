@@ -25,7 +25,7 @@ export default {
           type: 'add',
           path: `./src/components/${componentName}/src/${componentName}.vue`,
           templateFile: isTsx
-            ? '/plop/component/component-tsx.hbs'
+            ? './plop/component/componenttsx.hbs'
             : './plop/component/component.hbs',
           data: {
             name,
@@ -42,5 +42,6 @@ export default {
         }
       )
     }
+    return actions
   }
 }
