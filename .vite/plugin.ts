@@ -14,6 +14,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { VitePWA } from 'vite-plugin-pwa'
 import importToCDN from 'vite-plugin-cdn-import'
+import ViteMarkdown from 'vite-plugin-vue-markdown'
 
 /** @TODO:自定义CDN导入 */
 const CDN_IMPORT_MAP = [{}]
@@ -21,11 +22,14 @@ const CDN_IMPORT_MAP = [{}]
 export function createVitePlugin(): PluginOption[] {
   return [
     VueRouter({
-      dts: 'type/typed-router.d.ts'
+      dts: 'type/typed-router.d.ts',
+      extensions: ['vue', 'ts', 'tsx', 'md']
     }),
     VueMacros({
       plugins: {
-        vue: vue(),
+        vue: vue({
+          include: [/\.vue$/, /\.md$/]
+        }),
         vueJsx: vueJsx()
       }
     }),
@@ -61,10 +65,12 @@ export function createVitePlugin(): PluginOption[] {
           customCollections: ['menu'] // 自定义图标集合
         })
       ],
-      dts: 'type/components.d.ts'
+      dts: 'type/components.d.ts',
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/] // 扩展导入组件
     }),
     VitePWA({
       registerType: 'autoUpdate'
-    })
+    }),
+    ViteMarkdown()
   ]
 }
