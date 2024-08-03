@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: 测试标题-测试渲染
 meta:
@@ -6,31 +7,17 @@ meta:
 test: test
 ---
 <Container class="h-40px" >
+=======
+
+>>>>>>> feature
 
 
 <script setup lang="ts" >
-import type { SwiperItemType } from '@/components/Swiper'
-import Bg from '@/assets/images/banner/banner-1.jpg'
-
-const items: SwiperItemType[] = [
-  {
-    image: Bg,
-    title: '技术改变生活',
-    subTitle: '让生活更美好'
-  }
+const items = [
+'https://class.imooc.com/static/module/marketpage2020/img/intro/fe2023/tab-swiper1.png',
+"https://class.imooc.com/static/module/marketpage2020/img/intro/fe2023/tab-swiper4.png"
 ]
 </script>
 
-<Swiper :items="items" ></Swiper>
 
-
-# 标题1测试
-
-* 测试渲染
-
-## 标题2测试
-
-**测试渲染**
-
-
-</Container>
+<ImageSwiper height="500px"   :images="items" :titles="['测试标题','1']" ></ImageSwiper>
