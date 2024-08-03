@@ -1,10 +1,5 @@
-<script lang="ts">
-import { Swiper } from '@/components/Swiper'
-</script>
 <template>
-  <div class="bg-red">
-    <Swiper />
-  </div>
+  <div class="bg-red">1211</div>
 </template>
 
 <route lang="yaml">
