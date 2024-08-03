@@ -3,7 +3,8 @@ import { Swiper } from '@/components/Swiper'
 </script>
 <template>
   <div class="bg-red">
-    <Swiper />
+    11
+    <Swiper   />
   </div>
 </template>
 

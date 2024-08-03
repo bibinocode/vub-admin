@@ -12,8 +12,9 @@ import Layouts from 'vite-plugin-vue-layouts'
 import VueMacros from 'unplugin-vue-macros/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
-import importToCDN from 'vite-plugin-cdn-import'
 import { VitePWA } from 'vite-plugin-pwa'
+import importToCDN from 'vite-plugin-cdn-import'
+
 /** @TODO:自定义CDN导入 */
 const CDN_IMPORT_MAP = [{}]
 
