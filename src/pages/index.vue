@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="bg-red">1211</div>
 </template>
 
