@@ -5,7 +5,7 @@ module.exports = {
   parserOpts: {
     headerPattern: /^(\w*)(?:\(([\w$.\-*/ ]*)\))?: (.*)$/, // 支持 type(scope): subject 格式
     headerCorrespondence: ['type', 'scope', 'subject'], // 映射到 type, scope 和 subject 字段
-    noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'], // 破坏性变更关键字
+    noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'] // 破坏性变更关键字
   },
   // 自定义生成器选项
   writerOpts: {
@@ -49,6 +49,6 @@ module.exports = {
     },
     groupBy: 'type', // 按类型组织提交
     commitGroupsSort: ['Features', 'Bug Fixes', 'Performance Improvements'], // 自定义提交组顺序
-    commitsSort: ['scope', 'subject'], // 按范围和描述排序
-  },
+    commitsSort: ['scope', 'subject'] // 按范围和描述排序
+  }
 }

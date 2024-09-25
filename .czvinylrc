@@ -50,13 +50,14 @@
             "value": "test"
         }
     ],
-    "skipScope": false,
+     "skipScope": false,
     "skipTicketId": true,
-    "skipBody": true,
+    "skipBody": false,
     "subjectMaxLength": 70,
     "subjectMinLength": 3,
     "typeQuestion": "选择提交类型:",
     "scopeQuestion": "选择改动范围:",
     "bodyQuestion": "请输入详细描述（可跳过）:",
+    "breakingQuestion": "列出破坏性变更 (可跳过):",
     "footerQuestion": "请输入备注（可跳过）:"
 }

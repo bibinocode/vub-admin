@@ -42,7 +42,8 @@
     "cz": "pnpm git cz",
     "in": "pnpm install",
     "prepare": "husky",
-    "log": "pnpm exec conventional-changelog -p ./changelog.config.js -i CHANGELOG.md -s -r 0",
+    "log-tag": "pnpm exec conventional-changelog -p ./changelog.config.js -i CHANGELOG.md -s -r 0 --tag-prefix 'v'",
+    "log": "pnpm exec conventional-changelog -p ./changelog.config.js -i CHANGELOG.md -s --skip-unreleased",
     "clean-cache": "pnpm exec rimraf node_modules/.cache",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
