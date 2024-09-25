@@ -24,7 +24,7 @@ export function createVitePlugin(): PluginOption[] {
   return [
     VueRouter({
       dts: 'type/typed-router.d.ts',
-      extensions: ['vue', 'md']
+      extensions: ['.vue', '.md','.tsx']
     }),
     VueMacros({
       plugins: {
