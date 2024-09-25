@@ -1,5 +1,6 @@
 ## <small>1.0.3 (2024-09-25)</small>
 
+* feat(src): axios 封装 字典管理封装 ([9ae26fa](https://github.com/bibinocode/vub-admin/commit/9ae26fa))
 * 1.0.1 ([ab03bb5](https://github.com/bibinocode/vub-admin/commit/ab03bb5))
 * 1.0.2 ([010215f](https://github.com/bibinocode/vub-admin/commit/010215f))
 * 1.0.3 ([7a5c088](https://github.com/bibinocode/vub-admin/commit/7a5c088))
