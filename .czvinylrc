@@ -50,7 +50,7 @@
             "value": "test"
         }
     ],
-     "skipScope": false,
+    "skipScope": false,
     "skipTicketId": true,
     "skipBody": false,
     "subjectMaxLength": 70,

@@ -45,7 +45,6 @@ module.exports = {
         default:
           return
       }
-      return commit
     },
     groupBy: 'type', // 按类型组织提交
     commitGroupsSort: ['Features', 'Bug Fixes', 'Performance Improvements'], // 自定义提交组顺序
